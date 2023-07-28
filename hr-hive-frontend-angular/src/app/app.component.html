@@ -1,0 +1,20 @@
+<header>
+  <nav class="h-14 bg-slate-800 text-white">
+      <div class="flex justify-between items-center px-5 py-2">
+        <h2 class="font-bold text-2xl">BSS-ERP</h2>
+        <div class="">
+          <ul class="flex justify-evenly items-center">
+            <li class="px-5"><a routerLink="employees" routerLinkActive="">Home</a></li>
+            <li class="px-5"><a routerLink="">Services</a></li>
+            <li class="px-5"><a routerLink="create-employees">DashBoard</a></li>
+            <li class="px-5 bg-white text-black rounded p-2 font-semibold"><a routerLink="">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+</header>
+<main id="home">
+  <div class="">
+    <router-outlet></router-outlet>
+  </div>
+</main>

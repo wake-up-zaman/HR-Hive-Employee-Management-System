@@ -1,0 +1,44 @@
+<h2 class="text-center font-bold my-5 text-xl">Employee List</h2>
+<div class="flex justify-center">
+  <div class="text-center flex justify-center bg-slate-800 text-white p-8 w-full ">
+    <table>
+      <thead>
+        <tr>
+          <th class="px-7">Employee ID</th>
+          <th class="px-7">Full Name</th>
+          <th class="px-7">Designation</th>
+          <th class="px-7">Email</th>
+          <th class="px-7">Phone</th>
+          <th class="px-7">Address</th>
+          <th class="px-7">Gender</th>
+          <th class="px-7">Eit</th>
+          <th class="px-7">Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td class="py-3">{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.designation }}</td>
+          <td>{{ employee.emailId }}</td>
+          <td>{{ employee.phoneNumber }}</td>
+          <td>{{ employee.address }}</td>
+          <td>{{ employee.gender }}</td>
+          <td>
+            <button (click)="updateEmployee(employee.id)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update</button>
+          </td>
+          <td>
+            <button (click)="deleteEmployee(employee.id)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table> 
+   
+  </div>
+ 
+</div>
+<div class="flex justify-center">
+  <button (click)="createEmployeeRoute()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-56 mt-10">Add New</button>
+</div>
+
+
